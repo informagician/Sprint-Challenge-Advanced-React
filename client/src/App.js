@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import axios from 'axios';
+import NavBar from './components/NavBar';
 
 class App extends React.Component {
   
@@ -22,7 +23,9 @@ class App extends React.Component {
   render() {
     console.log(this.state.playerData)
     return (
-      <div className="App">
+      <div>
+        <NavBar />
+        <main>
         {this.state.playerData.map(item => (
           <div key={item.id}>
             <span>{item.name}</span>,
@@ -30,6 +33,7 @@ class App extends React.Component {
             <span>{item.searches}</span>
           </div>
         ))}
+        </main>
       </div>
     );
   }
