@@ -9,7 +9,7 @@ class App extends React.Component {
     playerData: []
   };
   
-
+  
   componentDidMount() {
     axios
     .get('http://localhost:5000/api/players')
@@ -22,6 +22,7 @@ class App extends React.Component {
 
   render() {
     console.log(this.state.playerData)
+    console.log(document.body.classList.value)
     return (
       <div>
         <NavBar />
