@@ -27,3 +27,6 @@ main {
   background-color: #282c34;
   color: #fff;
 }
+li {
+  margin: 8px 0;
+}

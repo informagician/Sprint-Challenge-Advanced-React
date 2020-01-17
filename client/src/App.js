@@ -26,13 +26,16 @@ class App extends React.Component {
       <div>
         <NavBar />
         <main>
+        <ul >
         {this.state.playerData.map(item => (
-          <div key={item.id}>
+          
+            <li key={item.id}>
             <span>{item.name}</span>,
             <span>{item.country}</span>,
             <span>{item.searches}</span>
-          </div>
+            </li>
         ))}
+        </ul>
         </main>
       </div>
     );
