@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import axios from 'axios';
 import NavBar from './components/NavBar';
+import Search from './components/Search'
 
 class App extends React.Component {
   
@@ -15,21 +16,18 @@ class App extends React.Component {
     .get('http://localhost:5000/api/players')
     .then(res => {
       this.setState({playerData: [...res.data]})
-      //console.log(this.state.playerData)
     })
     .catch(err => console.log(err))
   }
 
   render() {
-    console.log(this.state.playerData)
-    console.log(document.body.classList.value)
     return (
       <div>
         <NavBar />
         <main>
+        {/* <Search state={this.state} /> */}
         <ul >
         {this.state.playerData.map(item => (
-          
             <li key={item.id}>
             <span>{item.name}</span>,
             <span>{item.country}</span>,
